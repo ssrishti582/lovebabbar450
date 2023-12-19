@@ -1,0 +1,9 @@
+int buy=INT_MAX;
+        int sell=0;
+        int n=prices.size();
+        for(int i=0;i<n;i++){
+           
+            buy=std::min(buy,prices[i]); // Corrected line
+            sell=std::max(sell,prices[i]-buy);
+        }
+        return sell;
